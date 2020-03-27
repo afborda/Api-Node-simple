@@ -1,3 +1,5 @@
+const users = require("../mock/MockUsers");
+
 module.exports = {
   async show(req, res) {
     const loginData = req.body;

@@ -5,9 +5,9 @@ const ControllerMovie = require("./controllers/controllerMovie");
 
 const routes = express.Router();
 
+routes.post("/user", SessionController.show);
+
 routes.get("/movies", ControllerMovie.index);
 routes.get("/movies/:id", ControllerMovie.show);
-
-routes.post("/user", SessionController.show);
 
 module.exports = routes;
