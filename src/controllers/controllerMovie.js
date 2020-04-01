@@ -11,6 +11,7 @@ module.exports = {
     const movie = dataMovies.filter(item => item.imdbID == id);
     res.json(movie);
   },
+
   filterCategory(req, res) {
     const movieFilter = req.body;
     const movies = dataMovies.filter(
