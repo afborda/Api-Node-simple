@@ -10,5 +10,12 @@ module.exports = {
     const { id } = req.params;
     const movie = dataMovies.filter(item => item.imdbID == id);
     res.json(movie);
+  },
+  filterCategory(req, res) {
+    const movieFilter = req.body;
+    const movies = dataMovies.filter(
+      item => item.category === movieFilter.category
+    );
+    return res.json(movies);
   }
 };
